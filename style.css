@@ -1,571 +1,584 @@
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Maven Pro', sans-serif;
-}
-.cross{
-    display: none;
-}
-a{
-    text-decoration: none;
-}
-li{
-    list-style: none;
-}
-h3{
-    font-size: 44px;
-    font-weight: 600;
-}
-h6{
-    font-size: 20px;
-    color: lightgrey;
-    margin-top: 16px;
-}
-
-
-.navbar{
-    background: linear-gradient(to left, #fdc500, #fdca24, #fbd457, #fbde7f, #fbd457,#fdca24, #fdc500);
-    width: 100%;
-    padding: 0% 10%;
-    height: 7rem;
-    position: sticky;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 100;
-}
-.logo{
-    width: 20%;
-}
-
-.logo img{
-    width: 12rem;
-    cursor: pointer;
-}
-
-.navlist{
-    width: 40%;
-    display: flex;
-}
-.navlist ul{
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-}
-.navlist ul li{
-    font-size: 24px;
-    font-weight: 600;
-    transition: 0.2s ease;
-    cursor: pointer;
-    color: #393939;
-}
-.navlist ul li a{
-    color: #393939;
-}
-
-.sociallinks{
-    display: flex;
-    align-items: center;
-    font-size: 28px;
-    color: #393939;
-    justify-content: space-evenly;
-}
-.sociallinks h4{
-    cursor: default;
-    margin-right: 20px;
-    font-size: 20px;
-}
-.sociallinks i{
-    margin-left: 20px;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.sociallinks i:hover ,.navlist ul li:hover{
-    scale: 1.2;
-}
-
-
-.hamburger{
-    font-size: 25px;
-    display: none;
-}
-
-
-.home{
-    background-image: url(./images/homepage.jpeg);
-    background-size: cover;
-    width: 100%;
-    height: 50rem;
-    position: relative;
-    background-attachment: fixed;
-}
-.home .overlay{
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7) ,rgba(255,255,255,0.3), rgba(255,255,255,0.1));
-    width: 100%;
-    height: 100%;
-}
-.hometext{
-    position: absolute;
-    background-color: transparent;
-    top: 0;
-    left: 0;
-    padding: 10% 25%;
-    width: 100%;
-    height: 100%;
-    cursor: default;
-}
-.hometext h1{
-    font-size: 3rem;
-    text-align: center;
-}
-.hometext p{
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 25px;
-}
-.buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 30px;
-    align-items: center;
-}
-
-.btn1 , .btn2{
-    padding: 15px 30px;
-    border-radius: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-.btn1{
-    background: linear-gradient(to left, #fdc500, #fdca24, #fbd457, #fbde7f, #fde58b);
-    font-weight: 600;
-    transition: 0.2s ease;
-}
-.btn2{
-    font-weight: 600;
-    color: #fdc500;
-    transition: 0.2s ease;
-}
-
-.services{
-    width: 100%;
-    padding: 0% 10%;
-    height: 50rem;
-    cursor: default;
-}
-.servicesheading{
-    padding: 5rem 8rem;
-}
-.servicesheading h1{
-    font-size: 3rem;
-    text-align: center;
-}
-.servicesheading p{
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 2rem;
-    line-height: 2rem;
-}
-.servicesmain{
-    width: 100%;
-    display: flex;
-}
-.illustrations{
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-}
-.illus{
-    width: 42%;
-    margin: 0.7rem;
-}
-.illus h1{
-    font-size: 18px;
-}
-.illus p{
-    font-size: 20px;
-}
-.illus .img1{
-    width: 11rem;
-}
-.img2{
-    width: 8rem;
-}
-.img3{
-    width: 10rem;
-}
-.img4{
-    width: 6rem;
-}
-.serviceimg{
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-.serviceimg img{
-    width: 90%;
-    
-}
-
-
-
-
-.pricing{
-    width: 100%;
-    padding: 0% 10%;
-    height: 50rem;
-}
-.pricingheading{
-    padding: 5rem 8rem;
-    cursor: default;
-}
-.pricingheading h1{
-    font-size: 3rem;
-    text-align: center;
-}
-.pricingheading p{
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 2rem;
-    line-height: 2rem;
-}
-.pricebox{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.plans{
-    width: 20%;
-    cursor: default;
-    height: 100%;
-    border-radius: 8px;
-    padding: 2rem;
-    border: 0.5px solid black;
-    color: #393939;
-}
-.plans h2{
-    text-align: center;
-    font-size: 44px;
-    font-weight: 500;
-}
-.plans h1{
-    font-size: 48px;
-    text-align: center;
-}
-.plans ul{
-    width: 100%;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.plans ul li{
-    font-size: 18px
-}
-.plans ul li i{
-    margin-right: 10px;
-}
-.plans .btn{
-    margin-left:15px;
-}
-
-
-.newsletter{
-    width: 100%;
-    padding: 8% 10%;
-    height: 50rem;
-}
-.newsletter h2{
-    cursor: default;
-    font-size: 44px;
-}
-.newsletter p{
-    cursor: default;
-    font-size: 22px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-.parallax{
-    background-image: linear-gradient(to right ,#fde48b7c , #fdca2483  ) , url(./images/homepage.jpeg);
-    min-height: 500px;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100%;
-    width: 100%;
-    padding: 10rem 20rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.newsinput{
-    background-color: white;
-    border-radius: 50px;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.newsinput i{
-    font-size: 30px;
-    margin-left: 20px;
-}
-.newsinput input{
-    width: 60%;
-    padding: 10px;
-}
-
-.contact{
-    width: 100%;
-    padding: 0% 10%;
-    height: 50rem;
-}
-.contactheading{
-    padding: 5rem 8rem;
-    cursor: default;
-}
-.contactheading h1{
-    font-size: 3rem;
-    text-align: center;
-}
-.contactheading p{
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 2rem;
-    line-height: 2rem;
-}
-.formcontact{
-    width: 100%;
-    height: 55%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.inputcontact{
-    width: 75%;
-    height: 40%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.inputcontact input{
-    width: 37.5%;
-    height: 3rem;
-    font-size: 20px;
-    padding: 12px;
-
-}
-.contacttextarea textarea{
-    width: 100%;
-    font-size: 20px;
-    height: 100%;
-    padding: 20px;
-}
-.seemore{
-    border-radius: 4px;
-    padding: 15px 45px;
-    font-size: 20px;
-    margin-top: 30px;
-}
-.btn1:hover{
-    background: linear-gradient(to right, #ffb700, #ffeba0);
-}
-.btn2:hover{
-    color: #393939;
-}
-
-.footer{
-    background-color:#fbde7f40;
-    width: 100%;
-    height: 41rem;
-    margin-top: 5rem;
-    padding-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    cursor: default;
-}
-.footerlinks{
-    width: 100%;
-    height: 25%;
-    padding: 0px 9.5rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.footersociallinks{
-    width: 15%;
-    display: flex;
-    justify-content: space-evenly;
-    cursor: pointer;
-}
-.footersociallinks i{
-    font-size: 30px;
-}
-.footertext{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-.footertext div{
-    width: 20%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.footertext div h4{
-    font-size: 20px;
-    color: #393939;
-    font-weight: 800;
-}
-.footertext div p{
-    font-size: 24px;
-    font-weight: 500;
-}
-.copyright{
-    background: linear-gradient(to left, #fdc500, #fdca24, #fbd457, #fbde7f, #fbd457,#fdca24, #fdc500);
-    width: 100%;
-    height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.offset::before{
-    display: block;
-    content: "";
-    height: 8rem;
-    margin-top: -2rem;
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Maven Pro", sans-serif;
+}
+.cross {
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+h3 {
+  font-size: 44px;
+  font-weight: 600;
+}
+h6 {
+  font-size: 20px;
+  color: lightgrey;
+  margin-top: 16px;
+}
+.navbar {
+  background: linear-gradient(
+    to left,
+    #fdc500,
+    #fdca24,
+    #fbd457,
+    #fbde7f,
+    #fbd457,
+    #fdca24,
+    #fdc500
+  );
+  width: 100%;
+  padding: 0% 10%;
+  height: 7rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+.logo {
+  width: 20%;
+}
+.logo img {
+  width: 12rem;
+  cursor: pointer;
+}
+.navlist {
+  width: 40%;
+  display: flex;
+}
+.navlist ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.navlist ul li {
+  font-size: 24px;
+  font-weight: 600;
+  transition: 0.2s ease;
+  cursor: pointer;
+  color: #393939;
+}
+.navlist ul li a {
+  color: #393939;
+}
+.sociallinks {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  color: #393939;
+  justify-content: space-evenly;
+}
+.sociallinks h4 {
+  cursor: default;
+  margin-right: 20px;
+  font-size: 20px;
+}
+.sociallinks i {
+  margin-left: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.sociallinks i:hover,
+.navlist ul li:hover {
+  scale: 1.2;
+}
+.hamburger {
+  font-size: 25px;
+  display: none;
+}
+.home {
+  background-image: url(./images/homepage.jpeg);
+  background-size: cover;
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  background-attachment: fixed;
+}
+.home .overlay {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  width: 100%;
+  height: 100%;
+}
+.hometext {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  padding: 10% 25%;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+.hometext h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.hometext p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 25px;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  align-items: center;
+}
+.btn1,
+.btn2 {
+  padding: 15px 30px;
+  border-radius: 40px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.btn1 {
+  background: linear-gradient(
+    to left,
+    #fdc500,
+    #fdca24,
+    #fbd457,
+    #fbde7f,
+    #fde58b
+  );
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.btn2 {
+  font-weight: 600;
+  color: #fdc500;
+  transition: 0.2s ease;
+}
+.services {
+  width: 100%;
+  padding: 0% 10%;
+  height: 50rem;
+  cursor: default;
+}
+.servicesheading {
+  padding: 5rem 8rem;
+}
+.servicesheading h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.servicesheading p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  line-height: 2rem;
+}
+.servicesmain {
+  width: 100%;
+  display: flex;
+}
+.illustrations {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.illus {
+  width: 42%;
+  margin: 0.7rem;
+}
+.illus h1 {
+  font-size: 18px;
+}
+.illus p {
+  font-size: 20px;
+}
+.illus .img1 {
+  width: 11rem;
+}
+.img2 {
+  width: 8rem;
+}
+.img3 {
+  width: 10rem;
+}
+.img4 {
+  width: 6rem;
+}
+.serviceimg {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.serviceimg img {
+  width: 90%;
+}
+.pricing {
+  width: 100%;
+  padding: 0% 10%;
+  height: 50rem;
+}
+.pricingheading {
+  padding: 5rem 8rem;
+  cursor: default;
+}
+.pricingheading h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.pricingheading p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  line-height: 2rem;
+}
+.pricebox {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.plans {
+  width: 20%;
+  cursor: default;
+  height: 100%;
+  border-radius: 8px;
+  padding: 2rem;
+  border: 0.5px solid black;
+  color: #393939;
+}
+.plans h2 {
+  text-align: center;
+  font-size: 44px;
+  font-weight: 500;
+}
+.plans h1 {
+  font-size: 48px;
+  text-align: center;
+}
+.plans ul {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.plans ul li {
+  font-size: 18px;
+}
+.plans ul li i {
+  margin-right: 10px;
+}
+.plans .btn {
+  margin-left: 15px;
+}
+.newsletter {
+  width: 100%;
+  padding: 8% 10%;
+  height: 50rem;
+}
+.newsletter h2 {
+  cursor: default;
+  font-size: 44px;
+}
+.newsletter p {
+  cursor: default;
+  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.parallax {
+  background-image: linear-gradient(to right, #fde48b7c, #fdca2483),
+    url(./images/homepage.jpeg);
+  min-height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  padding: 10rem 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.newsinput {
+  background-color: white;
+  border-radius: 50px;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newsinput i {
+  font-size: 30px;
+  margin-left: 20px;
+}
+.newsinput input {
+  width: 60%;
+  padding: 10px;
+}
+.contact {
+  width: 100%;
+  padding: 0% 10%;
+  height: 50rem;
+}
+.contactheading {
+  padding: 5rem 8rem;
+  cursor: default;
+}
+.contactheading h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.contactheading p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  line-height: 2rem;
+}
+.formcontact {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inputcontact {
+  width: 75%;
+  height: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.inputcontact input {
+  width: 37.5%;
+  height: 3rem;
+  font-size: 20px;
+  padding: 12px;
+}
+.contacttextarea textarea {
+  width: 100%;
+  font-size: 20px;
+  height: 100%;
+  padding: 20px;
+}
+.seemore {
+  border-radius: 4px;
+  padding: 15px 45px;
+  font-size: 20px;
+  margin-top: 30px;
+}
+.btn1:hover {
+  background: linear-gradient(to right, #ffb700, #ffeba0);
+}
+.btn2:hover {
+  color: #393939;
+}
+.footer {
+  background-color: #fbde7f40;
+  width: 100%;
+  height: 41rem;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: default;
+}
+.footerlinks {
+  width: 100%;
+  height: 25%;
+  padding: 0px 9.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footersociallinks {
+  width: 15%;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+.footersociallinks i {
+  font-size: 30px;
+}
+.footertext {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.footertext div {
+  width: 20%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.footertext div h4 {
+  font-size: 20px;
+  color: #393939;
+  font-weight: 800;
+}
+.footertext div p {
+  font-size: 24px;
+  font-weight: 500;
+}
+.copyright {
+  background: linear-gradient(
+    to left,
+    #fdc500,
+    #fdca24,
+    #fbd457,
+    #fbde7f,
+    #fbd457,
+    #fdca24,
+    #fdc500
+  );
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offset::before {
+  display: block;
+  content: "";
+  height: 8rem;
+  margin-top: -2rem;
 }
 
 /* MEDIA
 QUERIES */
 
-@media only screen and (max-width : 950px){
-    .navbar{
-        padding: 0% 5rem;
-    }
-.sociallinks{
+@media only screen and (max-width: 950px) {
+  .navbar {
+    padding: 0% 5rem;
+  }
+  .sociallinks {
     display: none;
-}
-.navlist ul li a{
+  }
+  .navlist ul li a {
     font-size: 20px;
     margin-right: 20px;
-}
-.hometext{
+  }
+  .hometext {
     padding: 10% 18%;
-}
-.hometext h1{
+  }
+  .hometext h1 {
     font-size: 2.5rem;
-}
-.hometext p{
+  }
+  .hometext p {
     font-size: 25px;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
-}
+  }
 
-.services , .pricing , .contact {
+  .services,
+  .pricing,
+  .contact {
     padding: 0% 2%;
-}
-.newsletter{
+  }
+  .newsletter {
     height: 35rem;
-}
-.parallax{
+  }
+  .parallax {
     padding: 0% 10%;
-}
-.pricing{
+  }
+  .pricing {
     margin-bottom: 5rem;
-}
-.illustrations{
+  }
+  .illustrations {
     width: 60%;
-}
-.illus p{
+  }
+  .illus p {
     font-size: 16px;
-}
-.serviceimg{
+  }
+  .serviceimg {
     width: 40%;
-}
-.plans h2{
+  }
+  .plans h2 {
     font-size: 30px;
-}
-.plans h1{
+  }
+  .plans h1 {
     font-size: 34px;
-}
-.plans{
+  }
+  .plans {
     width: 24%;
-}
-.inputcontact{
+  }
+  .inputcontact {
     width: 83.5%;
     justify-content: space-between;
-}
-.inputcontact input{
+  }
+  .inputcontact input {
     width: 45%;
-}
-.footer{
+  }
+  .footer {
     margin-top: 10rem;
-}
-.footerlinks{
-justify-content: space-between;
-}
-.footersociallinks i{
+  }
+  .footerlinks {
+    justify-content: space-between;
+  }
+  .footersociallinks i {
     margin-right: 20px;
-}
-.footertext div h4{
+  }
+  .footertext div h4 {
     font-size: 20px;
-}
-.footertext div p{
+  }
+  .footertext div p {
     font-size: 20px;
-}
-.copyright h1{
+  }
+  .copyright h1 {
     font-size: 20px;
     color: #393939;
+  }
 }
 
+@media only screen and (max-width: 775px) {
+  .home {
+    height: 36rem;
+  }
+  .hometext h1 {
+    font-size: 2rem;
+  }
+  .plans {
+    padding: 0 0.5rem;
+  }
+
+  .logo img {
+    width: 7rem;
+  }
 }
 
-@media only screen and (max-width : 775px){
-    .home{
-        height: 36rem;
-    }
-    .hometext h1{
-        font-size: 2rem;
-    }
-    .plans{
-        padding: 0 0.5rem;
-    }
-
-    .logo img{
-        width: 7rem;
-    }
-}
-@media only screen and (max-width : 450px){
-    .cross{
-        display: inline;
-        position: absolute;
-        top: 7%;
-        right: 14%;
-    }
-    .navlist{
-        display: none;
-    }
-.navlisthide{
+@media only screen and (max-width: 450px) {
+  .cross {
+    display: inline;
+    position: absolute;
+    top: 7%;
+    right: 14%;
+  }
+  .navlist {
+    display: none;
+  }
+  .navlisthide {
     display: block;
-}
-.navlist ul{
+  }
+  .navlist ul {
     position: absolute;
     top: 0;
     background-color: #fdca24;
@@ -575,68 +588,69 @@ justify-content: space-between;
     padding: 20vh 10vh;
     height: 100vh;
     transition: 0.5s ease;
-}
-.navlist ul li a{
+  }
+  .navlist ul li a {
     font-size: 2rem;
-}
-.hometext{
+  }
+  .hometext {
     padding: 1rem;
-}
-.hamburger{
+  }
+  .hamburger {
     display: inline;
-}
-.servicesheading ,.pricingheading ,.contactheading{
+  }
+  .servicesheading,
+  .pricingheading,
+  .contactheading {
     padding: 1rem;
-}
-.plans{
+  }
+  .plans {
     min-width: 175px;
     margin-top: 2rem;
-}
-.services{
+  }
+  .services {
     height: auto;
-}
-.parallax{
+  }
+  .parallax {
     padding: 1rem;
-}
-.servicesmain{
+  }
+  .servicesmain {
     display: flex;
     flex-direction: column;
-}
-.illustrations{
+  }
+  .illustrations {
     width: 100%;
     justify-content: center;
     align-items: center;
-}
-.serviceimg{
+  }
+  .serviceimg {
     margin-top: 4rem;
     width: 100%;
-}
-.serviceimg img{
+  }
+  .serviceimg img {
     width: 100%;
-}
-.plan34{
+  }
+  .plan34 {
     display: none;
-}
-.footerlinks{
+  }
+  .footerlinks {
     justify-content: center;
-}
-.footerlinks .logo img{
+  }
+  .footerlinks .logo img {
     display: none;
-}
-.footertext{
+  }
+  .footertext {
     justify-content: space-between;
     padding: 1rem;
     height: 70%;
-}
-.footer{
+  }
+  .footer {
     height: 30rem;
     justify-content: space-between;
-}
-.footerlinks{
+  }
+  .footerlinks {
     height: 10%;
-}
-.copyright h1{
+  }
+  .copyright h1 {
     font-size: 14px;
-}
-
+  }
 }
